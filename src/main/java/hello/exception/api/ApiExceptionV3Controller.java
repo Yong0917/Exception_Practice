@@ -22,9 +22,10 @@ public class ApiExceptionV3Controller {
             throw new IllegalArgumentException("잘못된 입력 값");
         }
         if (id.equals("user-ex")) {
-            throw new UserException("사용자 오류");
+            throw new UserException("사용자 오류");      //최상위 Exception
         }
 
+        //정상적으로 호출하면 비즈니스 로직 실행
         return new MemberDto(id, "hello " + id);
     }
 

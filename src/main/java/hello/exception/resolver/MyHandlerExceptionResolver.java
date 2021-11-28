@@ -20,7 +20,7 @@ public class MyHandlerExceptionResolver implements HandlerExceptionResolver {
             if (ex instanceof IllegalArgumentException) {
                 log.info("IllegalArgumentException resolver to 400");
                 response.sendError(HttpServletResponse.SC_BAD_REQUEST, ex.getMessage());
-                return new ModelAndView();
+                return new ModelAndView();      // 전에는 model and view 를 리턴해줫어야 됬음
             }
 
         } catch (IOException e) {

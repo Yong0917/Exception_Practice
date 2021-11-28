@@ -23,6 +23,8 @@ public class ApiExceptionV2Controller {
             throw new UserException("사용자 오류");
         }
 
+
+        //정상적으로 호출하면 비즈니스 로직 실행
         return new MemberDto(id, "hello " + id);
     }
 

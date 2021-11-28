@@ -33,10 +33,10 @@ public class UserHandlerExceptionResolver implements HandlerExceptionResolver {
                     errorResult.put("message", ex.getMessage());
                     String result = objectMapper.writeValueAsString(errorResult);
 
-                    response.setContentType("application/json");
+                    response.setContentType("application/json");        // 형식 지정가능
                     response.setCharacterEncoding("utf-8");
                     response.getWriter().write(result);
-                    return new ModelAndView();
+                    return new ModelAndView(); // 전에는 model and view 를 리턴해줫어야 됬음
                 } else {
                     // TEXT/HTML
                     return new ModelAndView("error/500");

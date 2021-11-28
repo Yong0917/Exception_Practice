@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @Slf4j
-@RestControllerAdvice(basePackages = "hello.exception.api")
-public class ExControllerAdvice {
+@RestControllerAdvice(basePackages = "hello.exception.api")     //  hello/exception/api 패키지 전부다 오류핸든러잡아줌
+public class ExControllerAdvice {       // 여기서 메시지 설정 및 코드 설정 가능
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(IllegalArgumentException.class)

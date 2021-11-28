@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class ErrorResult {
+public class ErrorResult {      // code, message 선언
     private String code;
     private String message;
 }
